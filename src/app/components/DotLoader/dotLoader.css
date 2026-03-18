@@ -1,0 +1,31 @@
+.progress-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 250ms ease-out;
+  margin: -4px 0 0;
+}
+
+.progress-bar--not-visible {
+  opacity: 0;
+}
+
+.progress-bar svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  fill: var(--color-brand-primary);
+  animation: progress-bar-scroll 250ms infinite linear;
+}
+
+@keyframes progress-bar-scroll {
+  100% {
+    transform: translateX(-8px);
+  }
+}

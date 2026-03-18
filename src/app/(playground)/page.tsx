@@ -1,13 +1,16 @@
 import { type Metadata } from "next";
 import {
   Divider,
+  DotLoader,
   EmailLink,
   ExternalLink,
   Heading,
   Loader,
+  Logo,
   NavLink,
   PhoneLink,
   SocialMediaIcon,
+  TextOverlay,
 } from "@/app/components";
 import { PlaygroundSection } from "./components";
 
@@ -118,6 +121,21 @@ export default async function Playground() {
       </PlaygroundSection>
 
       <PlaygroundSection
+        title="Logo"
+        description={
+          <>
+            Brand logo rendered using Next.js Image for optimized loading and
+            responsive scaling.
+          </>
+        }
+        exampleClassName="flex items-center gap-8"
+      >
+        <Logo size="sm" />
+        <Logo size="md" />
+        <Logo size="lg" />
+      </PlaygroundSection>
+
+      <PlaygroundSection
         title="Divider"
         description={
           <>
@@ -147,9 +165,46 @@ export default async function Playground() {
             fetching, form submission, or background processing.
           </>
         }
-        exampleClassName="flex items-center gap-8"
       >
         <Loader />
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="DotLoader"
+        description={
+          <>
+            Loader component that displays an animated horizontal sequence of
+            dots. Used for lightweight loading states where a spinner feels too
+            heavy.
+          </>
+        }
+        exampleClassName="w-full max-w-2xl pt-2"
+      >
+        <DotLoader />
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Text Overlay"
+        description={
+          <>
+            Component that overlays centered text on top of existing content.
+            Commonly used for states such as loading, locked, or unavailable
+            items.
+          </>
+        }
+        exampleClassName="flex flex-col gap-6 max-w-sm"
+      >
+        <TextOverlay label="Locked" isVisible>
+          <div className="h-32 flex items-center justify-center border border-border-default">
+            Content. Content. Content.
+          </div>
+        </TextOverlay>
+
+        <TextOverlay label="Locked" isVisible={false}>
+          <div className="h-32 flex items-center justify-center border border-border-default">
+            Content. Content. Content.
+          </div>
+        </TextOverlay>
       </PlaygroundSection>
     </main>
   );
