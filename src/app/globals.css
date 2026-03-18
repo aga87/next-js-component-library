@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-poppins);
+}
+
+@layer utilities {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5 {
+    @apply font-display;
+  }
+  h1,
+  h2 {
+    @apply font-medium;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+}
