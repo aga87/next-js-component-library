@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import {
+  Button,
   Divider,
   DotLoader,
   EmailLink,
@@ -10,7 +11,9 @@ import {
   NavLink,
   PhoneLink,
   SocialMediaIcon,
+  Tag,
   TextOverlay,
+  Tooltip,
 } from "@/app/components";
 import { PlaygroundSection } from "./components";
 
@@ -205,6 +208,73 @@ export default async function Playground() {
             Content. Content. Content.
           </div>
         </TextOverlay>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Tag"
+        description={
+          <>
+            Small inline label used to highlight metadata such as status,
+            category, or feature flags.
+          </>
+        }
+        exampleClassName="flex items-center gap-3"
+      >
+        <Tag>New</Tag>
+        <Tag>Beta</Tag>
+        <Tag>Featured</Tag>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Tooltip"
+        description={
+          <>
+            Generic tooltip component used to display contextual information
+            when hovering or focusing an element. If no trigger is provided, the
+            component defaults to rendering an information icon.
+          </>
+        }
+        exampleClassName="flex items-center gap-3"
+      >
+        <Tooltip
+          content={
+            <div className="space-y-2">
+              <p>Account balance</p>
+              <p>Includes pending transactions.</p>
+              <a className="underline" href="#">
+                Learn more
+              </a>
+            </div>
+          }
+        >
+          <span>Balance</span>
+        </Tooltip>
+
+        <Tooltip content="This value includes pending transactions." />
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Button"
+        description={
+          <>
+            Interactive button component used to trigger actions. Supports
+            primary and secondary variants as well as disabled and full-width
+            states.
+          </>
+        }
+        exampleClassName="flex items-center gap-4 flex-wrap"
+      >
+        <Button>Primary</Button>
+
+        <Button variant="secondary">Secondary</Button>
+
+        <Button disabled>Primary disabled</Button>
+
+        <Button variant="secondary" disabled>
+          Secondary disabled
+        </Button>
+
+        <Button full>Full width</Button>
       </PlaygroundSection>
     </main>
   );

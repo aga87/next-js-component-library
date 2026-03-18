@@ -5,7 +5,7 @@ import { BASE_URL } from "@/app/constants/baseUrl";
 import { PageLayout } from "@/app/layout-components";
 
 const poppins = Poppins({
-  weight: ["400", "700"],
+  weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap", // prevent "flash of invisible text" (FOIT)
