@@ -1,10 +1,13 @@
 import { type Metadata } from "next";
 import {
+  Divider,
   EmailLink,
   ExternalLink,
   Heading,
+  Loader,
   NavLink,
   PhoneLink,
+  SocialMediaIcon,
 } from "@/app/components";
 import { PlaygroundSection } from "./components";
 
@@ -82,6 +85,22 @@ export default async function Playground() {
       </PlaygroundSection>
 
       <PlaygroundSection
+        title="Social Media Icon"
+        description={
+          <>
+            Icon component representing common social media platforms. Intended
+            to be used inside links or social navigation components.
+          </>
+        }
+        exampleClassName="flex items-center gap-3"
+      >
+        <SocialMediaIcon variant="instagram" />
+        <SocialMediaIcon variant="facebook" />
+        <SocialMediaIcon variant="linkedin" />
+        <SocialMediaIcon variant="youtube" />
+      </PlaygroundSection>
+
+      <PlaygroundSection
         title="Heading"
         description={
           <>
@@ -96,6 +115,41 @@ export default async function Playground() {
         <Heading level={2}>Heading level 2</Heading>
         <Heading level={3}>Heading level 3</Heading>
         <Heading level={4}>Heading level 4</Heading>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Divider"
+        description={
+          <>
+            Horizontal divider used to separate sections of content. Renders a
+            styled <code>hr</code> element with the default design-system border
+            color.
+          </>
+        }
+        exampleClassName="flex flex-col gap-6"
+      >
+        <div className="space-y-3">
+          <p className="text-sm text-text-secondary">
+            Content above the divider
+          </p>
+          <Divider />
+          <p className="text-sm text-text-secondary">
+            Content below the divider
+          </p>
+        </div>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Loader"
+        description={
+          <>
+            Loading spinner used to indicate in-progress states such as data
+            fetching, form submission, or background processing.
+          </>
+        }
+        exampleClassName="flex items-center gap-8"
+      >
+        <Loader />
       </PlaygroundSection>
     </main>
   );
