@@ -1,5 +1,11 @@
 import { type Metadata } from "next";
-import { Heading, NavLink } from "@/app/components";
+import {
+  EmailLink,
+  ExternalLink,
+  Heading,
+  NavLink,
+  PhoneLink,
+} from "@/app/components";
 import { PlaygroundSection } from "./components";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -28,6 +34,51 @@ export default async function Playground() {
         }
       >
         <NavLink href="/">Home</NavLink>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="External Link"
+        description={
+          <>
+            External link component for navigation to third-party pages. Renders
+            an anchor element with <code>target=&quot;_blank&quot;</code> and
+            secure <code>rel</code> attributes.
+          </>
+        }
+      >
+        <ExternalLink href="https://nextjs.org">Next.js</ExternalLink>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Email Link"
+        description={
+          <>
+            Link component for sending emails using the <code>mailto:</code>{" "}
+            protocol. Accepts an email address and optionally custom link text.
+          </>
+        }
+        exampleClassName="flex flex-col gap-3"
+      >
+        {/* default rendering */}
+        <EmailLink email="hello@example.com" />
+
+        {/* custom label */}
+        <EmailLink email="support@example.com">Email support</EmailLink>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Phone Link"
+        description={
+          <>
+            Link component for initiating phone calls using the{" "}
+            <code>tel:</code> protocol.
+          </>
+        }
+        exampleClassName="flex flex-col gap-3"
+      >
+        <PhoneLink tel="+31612345678" />
+
+        <PhoneLink tel="+31612345678">Call us</PhoneLink>
       </PlaygroundSection>
 
       <PlaygroundSection
