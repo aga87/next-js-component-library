@@ -1,16 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import { ReactNode } from "react";
 
 type NavLinkProps = {
-  text: string;
-  path: string;
+  href: string;
+  children: ReactNode;
 };
 
-export const NavLink = ({ text, path }: NavLinkProps) => {
+export function NavLink({ href, children }: NavLinkProps) {
   return (
-    <Link href={path} className="underline hover:cursor-pointer">
-      {text}
+    <Link
+      href={href}
+      className="underline underline-offset-4 transition hover:text-brand-primary"
+    >
+      {children}
     </Link>
   );
-};
+}
