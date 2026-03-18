@@ -1,7 +1,13 @@
+import { ReactNode, ElementType } from "react";
+
 type HeadingProps = {
-  children: React.ReactNode;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
+  children: ReactNode;
+  className?: string;
 };
 
-export const Heading = ({ children }: HeadingProps) => {
-  return <h2 className="text-center text-3xl font-bold mb-4">{children}</h2>;
-};
+export function Heading({ level = 2, children, className }: HeadingProps) {
+  const Tag = `h${level}` as ElementType;
+
+  return <Tag className={className}>{children}</Tag>;
+}
