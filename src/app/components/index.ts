@@ -1,4 +1,6 @@
 export * from "./Button";
+export * from "./ColorPicker/ColorPicker";
+export * from "./ColorPicker/useColorPicker";
 export * from "./Divider";
 export * from "./DotLoader/DotLoader";
 export * from "./EmailLink";

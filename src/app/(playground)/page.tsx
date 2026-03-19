@@ -6,6 +6,7 @@ import {
   BrandingPlayground,
   DataDisplayPlayground,
   FeedbackPlayground,
+  FormPlayground,
   NavigationPlayground,
   OverlaysPlayground,
   TypographyPlayground,
@@ -33,6 +34,8 @@ export default async function Playground() {
       <TypographyPlayground />
       <BrandingPlayground />
       <DataDisplayPlayground />
+
+      <FormPlayground />
 
       <NavigationPlayground />
       <ActionsPlayground />
