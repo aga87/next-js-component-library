@@ -6,9 +6,15 @@
   --font-sans: var(--font-poppins);
   --font-display: var(--font-poppins);
 
-  --color-brand-primary: #2563eb;
-  --color-brand-secondary: #3b82f6;
-  --color-brand-accent: #60a5fa;
+  --color-brand-primary: #2563eb; /* Tailwind blue-600 */
+  --color-brand-secondary: #1e40af; /* Tailwind blue-800 */
+  --color-brand-accent: #c2410c; /* Tailwind orange-700 */
+
+  --color-bg-primary: #ffffff; /* white */
+  --color-bg-secondary: #222222; /* soft black */
+  --color-bg-muted: #f3f4f6; /* Tailwind grey-100 */
+
+  --color-border-default: #e5e7eb; /* grey-200 */
 }
 
 @layer utilities {
