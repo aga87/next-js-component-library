@@ -9,6 +9,10 @@ import {
   ColorPickerExampleBasic,
   ColorPickerExampleWithDefaultValue,
   ColorPickerExampleWithDescription,
+  DropdownInputExample,
+  DropdownInputExampleWithDefault,
+  DropdownInputExampleWithValidation,
+  DropdownInputExampleInsideLabel,
   InputFieldAutocompleteExample,
   InputFieldBasicInsideLabelExample,
   InputFieldBasicOutsideLabelExample,
@@ -95,6 +99,24 @@ export const FormPlayground = () => {
       >
         <PlaygroundPreview orientation="vertical">
           <InputFieldAutocompleteExample />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Dropdown Input"
+        description={
+          <>
+            Select input component built with <code>Listbox</code> for
+            accessible option selection. Supports validation, error states, and
+            consistent styling with other form fields.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <DropdownInputExample />
+          <DropdownInputExampleWithDefault />
+          <DropdownInputExampleWithValidation />
+          <DropdownInputExampleInsideLabel />
         </PlaygroundPreview>
       </PlaygroundSection>
 

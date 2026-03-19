@@ -1,4 +1,5 @@
 export * from "./ColorPickerExamples";
+export * from "./DropdownInputExamples";
 export * from "./InputFieldAutocompleteExample";
 export * from "./InputFieldBasicExamples";
 export * from "./InputFieldWithBlurValidationExample";

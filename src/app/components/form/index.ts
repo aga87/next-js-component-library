@@ -1,5 +1,7 @@
 export * from "./ColorPicker/ColorPicker";
 export * from "./ColorPicker/useColorPicker";
+export * from "./DropdownInput/DropdownInput";
+export * from "./DropdownInput/useDropdownInput";
 export * from "./InputField/InputField";
 export * from "./InputField/useDecimalInput";
 export * from "./InputField/useDigitsInput";
