@@ -200,11 +200,13 @@ export default async function Playground() {
         }
       >
         <PlaygroundPreview orientation="vertical">
-          <TextOverlay label="Locked" isVisible>
-            <div className="max-w-md h-32 flex items-center justify-center border border-border-default">
-              Content. Content. Content.
-            </div>
-          </TextOverlay>
+          <div className="max-w-md">
+            <TextOverlay label="Locked" isVisible>
+              <div className="h-32 flex items-center justify-center border border-border-default">
+                Content. Content. Content.
+              </div>
+            </TextOverlay>
+          </div>
 
           <TextOverlay label="Locked" isVisible={false}>
             <div className="max-w-md h-32 flex items-center justify-center border border-border-default">
