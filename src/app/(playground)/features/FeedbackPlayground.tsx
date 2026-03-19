@@ -55,14 +55,14 @@ export const FeedbackPlayground = () => {
         <PlaygroundPreview orientation="vertical">
           <div className="max-w-md">
             <TextOverlay label="Locked" isVisible>
-              <div className="h-32 flex items-center justify-center border border-border-default">
+              <div className="h-32 flex items-center justify-center border border-stroke-default">
                 Content. Content. Content.
               </div>
             </TextOverlay>
           </div>
 
           <TextOverlay label="Locked" isVisible={false}>
-            <div className="max-w-md h-32 flex items-center justify-center border border-border-default">
+            <div className="max-w-md h-32 flex items-center justify-center border border-stroke-default">
               Content. Content. Content.
             </div>
           </TextOverlay>
