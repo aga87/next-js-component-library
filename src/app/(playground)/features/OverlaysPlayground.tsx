@@ -4,11 +4,15 @@ import {
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const OverlaysPlayground = () => {
+  const section = playgroundSections.overlays;
+
   return (
     <PlaygroundGroup
-      title="Overlays"
+      id={section.id}
+      title={section.label}
       description="Components that render layered UI elements above the main interface, typically triggered by interaction."
     >
       <PlaygroundSection

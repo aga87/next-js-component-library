@@ -4,11 +4,14 @@ import {
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const DataDisplayPlayground = () => {
+  const section = playgroundSections.dataDisplay;
   return (
     <PlaygroundGroup
-      title="Data Display"
+      id={section.id}
+      title={section.label}
       description="Components used to represent structured or semantic data within the UI."
     >
       <PlaygroundSection

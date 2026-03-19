@@ -4,11 +4,15 @@ import {
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const NavigationPlayground = () => {
+  const section = playgroundSections.navigation;
+
   return (
     <PlaygroundGroup
-      title="Navigation"
+      id={section.id}
+      title={section.label}
       description="Components that enable movement between pages, routes, or external resources."
     >
       <PlaygroundSection

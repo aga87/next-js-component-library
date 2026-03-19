@@ -1,15 +1,18 @@
 import { Loader, DotLoader, TextOverlay } from "@/app/components";
-
 import {
   PlaygroundGroup,
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const FeedbackPlayground = () => {
+  const section = playgroundSections.feedback;
+
   return (
     <PlaygroundGroup
-      title="Feedback"
+      id={section.id}
+      title={section.label}
       description="Components that communicate system state, progress, or availability to the user."
     >
       <PlaygroundSection

@@ -1,15 +1,18 @@
 import { Logo, SocialMediaIcon } from "@/app/components";
-
 import {
   PlaygroundGroup,
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const BrandingPlayground = () => {
+  const section = playgroundSections.branding;
+
   return (
     <PlaygroundGroup
-      title="Branding"
+      id={section.id}
+      title={section.label}
       description="Components that represent brand identity or external platforms."
     >
       <PlaygroundSection

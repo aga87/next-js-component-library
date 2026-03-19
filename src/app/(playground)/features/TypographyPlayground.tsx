@@ -4,11 +4,15 @@ import {
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const TypographyPlayground = () => {
+  const section = playgroundSections.typography;
+
   return (
     <PlaygroundGroup
-      title="Typography"
+      id={section.id}
+      title={section.label}
       description="Components responsible for text structure, hierarchy, and readable content presentation."
     >
       <PlaygroundSection

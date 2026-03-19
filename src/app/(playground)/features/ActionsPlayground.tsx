@@ -4,11 +4,14 @@ import {
   PlaygroundPreview,
   PlaygroundSection,
 } from "../components";
+import { playgroundSections } from "../config";
 
 export const ActionsPlayground = () => {
+  const section = playgroundSections.actions;
   return (
     <PlaygroundGroup
-      title="Actions"
+      id={section.id}
+      title={section.label}
       description="Components that trigger user-initiated operations or events."
     >
       <PlaygroundSection
