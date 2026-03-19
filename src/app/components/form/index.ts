@@ -6,5 +6,7 @@ export * from "./InputField/useDigitsInput";
 export * from "./InputField/useDateMask";
 export * from "./InputField/useIntegerInput";
 export * from "./InputField/useTextInput";
+export * from "./InputFieldWithAutocomplete/InputFieldWithAutocomplete";
+export * from "./InputFieldWithAutocomplete/useTextInputWithAutocomplete";
 export * from "./ErrorMessage";
 export * from "./Label";

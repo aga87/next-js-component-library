@@ -9,6 +9,7 @@ import {
   ColorPickerExampleBasic,
   ColorPickerExampleWithDefaultValue,
   ColorPickerExampleWithDescription,
+  InputFieldAutocompleteExample,
   InputFieldBasicInsideLabelExample,
   InputFieldBasicOutsideLabelExample,
   InputFieldDecimalBasicExample,
@@ -80,6 +81,20 @@ export const FormPlayground = () => {
           <InputFieldDecimalBasicExample />
           <InputFieldWithBlurValidationExample />
           <InputFieldDateMaskAndValidationExample />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Input Field with Autocomplete"
+        description={
+          <>
+            Input with autocomplete suggestions. Filters options based on user
+            input and supports keyboard navigation.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <InputFieldAutocompleteExample />
         </PlaygroundPreview>
       </PlaygroundSection>
 
