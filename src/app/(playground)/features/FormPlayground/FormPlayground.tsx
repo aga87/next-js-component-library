@@ -7,6 +7,7 @@ import {
 import { playgroundSections } from "../../config";
 import {
   ColorPickerExampleBasic,
+  ColorPickerExampleRequiredWithValidation,
   ColorPickerExampleWithDefaultValue,
   ColorPickerExampleWithDescription,
   DropdownInputExample,
@@ -153,6 +154,7 @@ export const FormPlayground = () => {
           <ColorPickerExampleBasic />
           <ColorPickerExampleWithDefaultValue />
           <ColorPickerExampleWithDescription />
+          <ColorPickerExampleRequiredWithValidation />
         </PlaygroundPreview>
       </PlaygroundSection>
     </PlaygroundGroup>

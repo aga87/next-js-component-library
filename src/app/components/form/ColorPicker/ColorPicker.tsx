@@ -68,6 +68,9 @@ export type ColorPickerProps = {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   name?: string;
   description?: string;
+  required?: boolean;
+  error?: string;
+  handleBlur?: React.FocusEventHandler<HTMLFieldSetElement>;
 };
 
 export const ColorPicker = ({
@@ -77,19 +80,27 @@ export const ColorPicker = ({
   handleChange,
   name = "colors",
   description,
+  required,
+  error,
+  handleBlur,
 }: ColorPickerProps) => {
-  const descriptionId = useId();
+  const generatedId = useId();
+  const groupName = name ?? generatedId;
+  const computedError = required && value.length === 0 ? error : undefined;
 
   return (
-    <Fieldset legend={label} description={description}>
-      <ul
-        className="flex flex-wrap items-center gap-3"
-        aria-describedby={description ? descriptionId : undefined}
-      >
+    <Fieldset
+      legend={label}
+      description={description}
+      isRequired={required}
+      error={computedError}
+      onBlur={handleBlur}
+    >
+      <ul className="flex flex-wrap items-center gap-3">
         {colorOptions.map((option) => (
           <ColorOption
             key={option.value}
-            name={name}
+            name={groupName}
             option={option}
             checked={value.includes(option.value)}
             onChange={handleChange}

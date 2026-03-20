@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { ColorPicker, useColorPicker } from "@/app/components";
 
 const colorOptions = [
@@ -57,6 +58,33 @@ export const ColorPickerExampleWithDescription = () => {
         colorOptions={colorOptions}
         value={selectedValues}
         handleChange={(e) => toggleValue(e.target.value)}
+      />
+      <p className="text-sm text-text-secondary">
+        Selected: {selectedValues.join(", ") || "None"}
+      </p>
+    </div>
+  );
+};
+
+export const ColorPickerExampleRequiredWithValidation = () => {
+  const [error, setError] = useState<string | undefined>();
+  const { selectedValues, toggleValue, handleBlur } = useColorPicker(
+    [],
+    (value) => {
+      setError(value.length === 0 ? "Select at least one colour" : undefined);
+    }
+  );
+
+  return (
+    <div className="flex flex-col gap-3">
+      <ColorPicker
+        label="Choose colours"
+        colorOptions={colorOptions}
+        value={selectedValues}
+        handleChange={(e) => toggleValue(e.target.value)}
+        handleBlur={handleBlur}
+        required
+        error={error}
       />
       <p className="text-sm text-text-secondary">
         Selected: {selectedValues.join(", ") || "None"}

@@ -2,13 +2,22 @@
 
 import { useState } from "react";
 
-export const useColorPicker = (initial: string[] = []) => {
-  const [selectedValues, setSelectedValues] = useState<string[]>(initial);
+export const useColorPicker = (
+  initialValues: string[] = [],
+  validateField?: (value: string[]) => void
+) => {
+  const [selectedValues, setSelectedValues] = useState<string[]>(initialValues);
 
   const toggleValue = (value: string) => {
     setSelectedValues((prev) =>
       prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
     );
+  };
+
+  const handleBlur = () => {
+    if (validateField) {
+      validateField(selectedValues);
+    }
   };
 
   const isSelected = (value: string) => {
@@ -20,6 +29,7 @@ export const useColorPicker = (initial: string[] = []) => {
   return {
     selectedValues,
     toggleValue,
+    handleBlur,
     isSelected,
     clear,
   };
