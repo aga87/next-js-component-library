@@ -36,12 +36,18 @@ const ColorOption = ({ name, option, checked, onChange }: ColorOptionProps) => {
           aria-hidden="true"
           title={option.label}
           className={classNames(
-            "flex h-9 w-9 items-center justify-center rounded-full border transition",
-            "border-border-default bg-bg-primary",
-            "peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-brand-primary peer-focus-visible:ring-offset-2",
-            checked
-              ? "ring-2 ring-brand-primary ring-offset-2"
-              : "hover:border-brand-primary/40"
+            "flex h-9 w-9 items-center justify-center rounded-full transition",
+            "bg-bg-primary border",
+
+            // base border
+            checked ? "border-2 border-brand-primary" : "border-border-default",
+
+            // hover (only when not selected)
+            !checked && "hover:border-brand-primary/40",
+
+            // focus (same pattern as radio)
+            "peer-focus-visible:outline-none",
+            "peer-focus-visible:ring-2 peer-focus-visible:ring-brand-primary peer-focus-visible:ring-offset-2"
           )}
         >
           <span
