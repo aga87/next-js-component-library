@@ -21,6 +21,9 @@ import {
   InputFieldIntegerBasicExample,
   InputFieldWithBlurValidationExample,
   InputFieldDateMaskAndValidationExample,
+  RadioGroupExampleBasic,
+  RadioGroupExampleWithDescriptions,
+  RadioGroupExampleWithValidation,
 } from "./components";
 
 export const FormPlayground = () => {
@@ -117,6 +120,22 @@ export const FormPlayground = () => {
           <DropdownInputExampleWithDefault />
           <DropdownInputExampleWithValidation />
           <DropdownInputExampleInsideLabel />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+      <PlaygroundSection
+        title="Radio Group"
+        description={
+          <>
+            Single-select input built with radio semantics. Allows users to
+            choose exactly one option from a list and supports default values,
+            descriptions, and validation.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <RadioGroupExampleBasic />
+          <RadioGroupExampleWithDescriptions />
+          <RadioGroupExampleWithValidation />
         </PlaygroundPreview>
       </PlaygroundSection>
 
