@@ -1,5 +1,6 @@
 import { useId } from "react";
 import classNames from "classnames";
+import { Fieldset } from "../Fieldset";
 
 type ColorOption = {
   value: string;
@@ -80,19 +81,11 @@ export const ColorPicker = ({
   const descriptionId = useId();
 
   return (
-    <fieldset
-      aria-describedby={description ? descriptionId : undefined}
-      className="space-y-3"
-    >
-      <legend className="text-sm font-medium text-text-primary">{label}</legend>
-
-      {description ? (
-        <p id={descriptionId} className="text-sm text-text-secondary">
-          {description}
-        </p>
-      ) : null}
-
-      <ul className="flex flex-wrap items-center gap-3">
+    <Fieldset legend={label} description={description}>
+      <ul
+        className="flex flex-wrap items-center gap-3"
+        aria-describedby={description ? descriptionId : undefined}
+      >
         {colorOptions.map((option) => (
           <ColorOption
             key={option.value}
@@ -103,6 +96,6 @@ export const ColorPicker = ({
           />
         ))}
       </ul>
-    </fieldset>
+    </Fieldset>
   );
 };

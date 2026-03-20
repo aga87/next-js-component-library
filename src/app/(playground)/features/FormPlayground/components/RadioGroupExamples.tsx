@@ -18,9 +18,11 @@ export const RadioGroupExampleBasic = () => {
     <RadioGroup
       name="shipping"
       label="Shipping method"
+      description="Select a shipping method"
       options={options}
       value={value}
       handleChange={handleChange}
+      required
     />
   );
 };
@@ -53,6 +55,7 @@ export const RadioGroupExampleWithDescriptions = () => {
       options={optionsWithDescriptions}
       value={value}
       handleChange={handleChange}
+      required
     />
   );
 };

@@ -2,22 +2,15 @@
 
 import { type ReactNode, useId } from "react";
 import { classNames } from "@/app/utils";
+import { Fieldset } from "../Fieldset";
 
-type RadioOption<T extends string | number> = {
+type RadioProps<T> = {
+  name: string;
   value: T;
   label: string;
-  description?: ReactNode;
-};
-
-type RadioGroupProps<T extends string | number> = {
-  name: string;
-  label: string;
-  options: readonly RadioOption<T>[];
-  value: T | undefined;
+  children?: ReactNode;
+  isChecked: boolean;
   handleChange: (value: T) => void;
-  handleBlur?: () => void;
-  required?: boolean;
-  error?: string;
 };
 
 const Radio = <T extends string | number>({
@@ -27,14 +20,7 @@ const Radio = <T extends string | number>({
   children,
   isChecked,
   handleChange,
-}: {
-  name: string;
-  value: T;
-  label: string;
-  children?: ReactNode;
-  isChecked: boolean;
-  handleChange: (value: T) => void;
-}) => {
+}: RadioProps<T>) => {
   const inputId = useId();
   const descriptionId = useId();
   const hasDescription = Boolean(children);
@@ -75,9 +61,28 @@ const Radio = <T extends string | number>({
   );
 };
 
+type RadioOption<T extends string | number> = {
+  value: T;
+  label: string;
+  description?: ReactNode;
+};
+
+type RadioGroupProps<T extends string | number> = {
+  name: string;
+  label: string;
+  description?: string;
+  options: readonly RadioOption<T>[];
+  value: T | undefined;
+  handleChange: (value: T) => void;
+  handleBlur?: () => void;
+  required?: boolean;
+  error?: string;
+};
+
 export const RadioGroup = <T extends string | number>({
   name,
   label,
+  description,
   options,
   value,
   handleChange,
@@ -85,13 +90,17 @@ export const RadioGroup = <T extends string | number>({
   required,
   error,
 }: RadioGroupProps<T>) => {
-  const showError = required && !value && error;
+  const errorId = useId();
 
   return (
-    <fieldset className="space-y-3" onBlur={handleBlur}>
-      <legend className="text-sm font-medium">{label}</legend>
-
-      <div className="space-y-2">
+    <Fieldset
+      legend={label}
+      description={description}
+      isRequired={required}
+      error={error}
+      onBlur={handleBlur}
+    >
+      <div className="space-y-2" aria-describedby={error ? errorId : undefined}>
         {options.map((option) => (
           <Radio
             key={String(option.value)}
@@ -105,8 +114,6 @@ export const RadioGroup = <T extends string | number>({
           </Radio>
         ))}
       </div>
-
-      {showError ? <p className="text-sm text-red-600">{error}</p> : null}
-    </fieldset>
+    </Fieldset>
   );
 };

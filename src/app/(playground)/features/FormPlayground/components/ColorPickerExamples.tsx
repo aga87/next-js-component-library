@@ -53,7 +53,7 @@ export const ColorPickerExampleWithDescription = () => {
     <div className="flex flex-col gap-3">
       <ColorPicker
         label="Filter by color"
-        description="Select one or more color options."
+        description="Select one or more color options"
         colorOptions={colorOptions}
         value={selectedValues}
         handleChange={(e) => toggleValue(e.target.value)}

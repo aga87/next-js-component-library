@@ -11,6 +11,7 @@ export * from "./InputField/useTextInput";
 export * from "./InputFieldWithAutocomplete/InputFieldWithAutocomplete";
 export * from "./InputFieldWithAutocomplete/useTextInputWithAutocomplete";
 export * from "./ErrorMessage";
+export * from "./Fieldset";
 export * from "./Label";
 export * from "./RadioGroup/RadioGroup";
 export * from "./RadioGroup/useRadioGroup";
