@@ -32,7 +32,25 @@ export const Fieldset = ({
   }
 
   return (
-    <fieldset onBlur={onBlur} aria-describedby={describedBy}>
+    <fieldset
+      aria-describedby={describedBy}
+      onBlur={(e) => {
+        /**
+         * React's onBlur bubbles, so this handler fires when focus moves
+         * between child elements inside the fieldset (e.g. between checkboxes).
+         *
+         * We only want to trigger validation when focus leaves the entire group.
+         *
+         * e.relatedTarget is the next focused element.
+         * If it is still inside the fieldset, ignore the blur.
+         */
+        const next = e.relatedTarget as Node | null;
+
+        if (!next || !e.currentTarget.contains(next)) {
+          onBlur?.(e);
+        }
+      }}
+    >
       <legend className="text-sm">
         <span className="flex items-center gap-x-1">
           <span>{legend}</span>
