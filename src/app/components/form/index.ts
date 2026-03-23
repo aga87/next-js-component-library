@@ -1,5 +1,7 @@
 export * from "./Checkbox/Checkbox";
 export * from "./Checkbox/useCheckbox";
+export * from "./CheckboxGroup/CheckboxGroup";
+export * from "./CheckboxGroup/useCheckboxGroup";
 export * from "./ColorPicker/ColorPicker";
 export * from "./ColorPicker/useColorPicker";
 export * from "./DropdownInput/DropdownInput";

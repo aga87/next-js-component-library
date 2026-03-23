@@ -9,6 +9,11 @@ import {
   CheckboxExampleBasic,
   CheckboxExampleRequired,
   CheckboxExampleDisabled,
+  CheckboxGroupExampleBasic,
+  CheckboxGroupExampleDefaultValues,
+  CheckboxGroupExampleRequired,
+  CheckboxGroupExampleWithDescription,
+  CheckboxGroupExampleDisabledOptions,
   ColorPickerExampleBasic,
   ColorPickerExampleRequiredWithValidation,
   ColorPickerExampleWithDefaultValue,
@@ -156,6 +161,25 @@ export const FormPlayground = () => {
           <CheckboxExampleBasic />
           <CheckboxExampleRequired />
           <CheckboxExampleDisabled />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Checkbox Group"
+        description={
+          <>
+            A set of related checkboxes allowing users to select multiple
+            values. Typically used when more than one option can be chosen
+            within a group.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <CheckboxGroupExampleBasic />
+          <CheckboxGroupExampleRequired />
+          <CheckboxGroupExampleWithDescription />
+          <CheckboxGroupExampleDisabledOptions />
+          <CheckboxGroupExampleDefaultValues />
         </PlaygroundPreview>
       </PlaygroundSection>
 

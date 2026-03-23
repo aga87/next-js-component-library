@@ -1,4 +1,5 @@
 export * from "./CheckboxExamples";
+export * from "./CheckboxGroupExamples";
 export * from "./ColorPickerExamples";
 export * from "./DropdownInputExamples";
 export * from "./InputFieldAutocompleteExample";
