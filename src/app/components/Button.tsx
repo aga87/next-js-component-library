@@ -28,9 +28,9 @@ export const Button = ({
 
   const disabledVariants = {
     primary:
-      "bg-bg-muted text-bg-secondary border-stroke-default cursor-not-allowed",
+      "bg-bg-muted text-text-disabled border-stroke-default cursor-not-allowed",
     secondary:
-      "bg-bg-muted text-bg-secondary border-stroke-default cursor-not-allowed",
+      "bg-bg-muted text-text-disabled border-stroke-default cursor-not-allowed",
   };
 
   return (
