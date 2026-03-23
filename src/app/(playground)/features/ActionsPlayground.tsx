@@ -19,14 +19,20 @@ export const ActionsPlayground = () => {
         description={
           <>
             Interactive button component used to trigger actions. Supports
-            primary and secondary variants as well as disabled and full-width
-            states.
+            primary and secondary variants, solid and outline appearances, as
+            well as disabled and full-width states.
           </>
         }
       >
         <PlaygroundPreview>
           <Button>Primary</Button>
+          <Button variant="primary" appearance="outline">
+            Primary (outline)
+          </Button>
           <Button variant="secondary">Secondary</Button>
+          <Button variant="secondary" appearance="outline">
+            Secondary (outline)
+          </Button>
           <Button disabled>Primary disabled</Button>
           <Button variant="secondary" disabled>
             Secondary disabled
