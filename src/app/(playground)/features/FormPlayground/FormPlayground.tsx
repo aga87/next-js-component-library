@@ -6,6 +6,9 @@ import {
 } from "../../components";
 import { playgroundSections } from "../../config";
 import {
+  CheckboxExampleBasic,
+  CheckboxExampleRequired,
+  CheckboxExampleDisabled,
   ColorPickerExampleBasic,
   ColorPickerExampleRequiredWithValidation,
   ColorPickerExampleWithDefaultValue,
@@ -137,6 +140,22 @@ export const FormPlayground = () => {
           <RadioGroupExampleBasic />
           <RadioGroupExampleWithDescriptions />
           <RadioGroupExampleWithValidation />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Checkbox"
+        description={
+          <>
+            Boolean input allowing users to toggle a single value. Commonly used
+            for confirmations such as accepting terms and conditions.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <CheckboxExampleBasic />
+          <CheckboxExampleRequired />
+          <CheckboxExampleDisabled />
         </PlaygroundPreview>
       </PlaygroundSection>
 
