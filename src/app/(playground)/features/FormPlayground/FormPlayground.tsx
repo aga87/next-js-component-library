@@ -33,6 +33,9 @@ import {
   RadioGroupExampleBasic,
   RadioGroupExampleWithDescriptions,
   RadioGroupExampleWithValidation,
+  SubmitButtonExampleBasic,
+  SubmitButtonExampleExternal,
+  SubmitButtonExampleLoading,
 } from "./components";
 
 export const FormPlayground = () => {
@@ -198,6 +201,24 @@ export const FormPlayground = () => {
           <ColorPickerExampleWithDefaultValue />
           <ColorPickerExampleWithDescription />
           <ColorPickerExampleRequiredWithValidation />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Submit Button"
+        description={
+          <>
+            Button specialised for form submission. Supports loading states and
+            can be linked to a form via <code>formId</code>. Supports primary
+            and secondary variants, solid and outline appearances, as well as
+            disabled and full-width states.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <SubmitButtonExampleBasic />
+          <SubmitButtonExampleLoading />
+          <SubmitButtonExampleExternal />
         </PlaygroundPreview>
       </PlaygroundSection>
     </PlaygroundGroup>
