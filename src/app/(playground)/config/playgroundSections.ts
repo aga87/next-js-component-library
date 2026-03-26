@@ -11,6 +11,10 @@ export const playgroundSections = {
     id: "data-display",
     label: "Data Display",
   },
+  form: {
+    id: "form",
+    label: "Form",
+  },
   navigation: {
     id: "navigation",
     label: "Navigation",

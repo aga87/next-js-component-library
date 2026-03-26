@@ -14,8 +14,8 @@ export const PlaygroundPreview = ({
     <div
       className={classNames(
         orientation === "horizontal"
-          ? "flex items-center gap-3 flex-wrap"
-          : "flex flex-col gap-3"
+          ? "flex flex-wrap items-center gap-3"
+          : "space-y-3"
       )}
     >
       {children}

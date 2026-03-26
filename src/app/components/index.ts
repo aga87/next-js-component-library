@@ -1,4 +1,5 @@
 export * from "./Button";
+export * from "./form";
 export * from "./Divider";
 export * from "./DotLoader/DotLoader";
 export * from "./EmailLink";
@@ -6,6 +7,7 @@ export * from "./ExternalLink";
 export * from "./Heading";
 export * from "./Loader";
 export * from "./Logo/Logo";
+export * from "./MailIcon";
 export * from "./NavLink";
 export * from "./PhoneLink";
 export * from "./SocialMediaIcon/SocialMediaIcon";
