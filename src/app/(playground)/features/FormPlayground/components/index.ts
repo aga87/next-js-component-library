@@ -6,5 +6,6 @@ export * from "./InputFieldAutocompleteExample";
 export * from "./InputFieldBasicExamples";
 export * from "./InputFieldWithBlurValidationExample";
 export * from "./InputFieldDateMaskAndValidationExample";
+export * from "./MultiRangeSliderExample";
 export * from "./RadioGroupExamples";
 export * from "./SubmitButtonExamples";

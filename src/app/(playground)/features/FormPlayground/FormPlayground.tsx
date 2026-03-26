@@ -30,6 +30,7 @@ import {
   InputFieldIntegerBasicExample,
   InputFieldWithBlurValidationExample,
   InputFieldDateMaskAndValidationExample,
+  MultiRangeSliderExample,
   RadioGroupExampleBasic,
   RadioGroupExampleWithDescriptions,
   RadioGroupExampleWithValidation,
@@ -183,6 +184,20 @@ export const FormPlayground = () => {
           <CheckboxGroupExampleWithDescription />
           <CheckboxGroupExampleDisabledOptions />
           <CheckboxGroupExampleDefaultValues />
+        </PlaygroundPreview>
+      </PlaygroundSection>
+
+      <PlaygroundSection
+        title="Multi Range Slider"
+        description={
+          <>
+            Dual-thumb range input used for selecting a minimum and maximum
+            value within a bounded interval.
+          </>
+        }
+      >
+        <PlaygroundPreview orientation="vertical">
+          <MultiRangeSliderExample />
         </PlaygroundPreview>
       </PlaygroundSection>
 

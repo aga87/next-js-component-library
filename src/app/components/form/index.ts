@@ -18,6 +18,8 @@ export * from "./ErrorMessage";
 export * from "./Fieldset";
 export * from "./Form";
 export * from "./Label";
+export * from "./MultiRangeSlider/MultiRangeSlider";
+export * from "./MultiRangeSlider/useMultiRangeSlider";
 export * from "./RadioGroup/RadioGroup";
 export * from "./RadioGroup/useRadioGroup";
 export * from "./SubmitButton";
