@@ -1,4 +1,5 @@
-import { ErrorMessage, Label, MailIcon } from "@/app/components";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { ErrorMessage, Label } from "@/app/components";
 import {
   PlaygroundGroup,
   PlaygroundSection,
@@ -64,7 +65,12 @@ export const FormPlayground = () => {
             inputId="example-icon"
             label="Email"
             isRequired
-            icon={<MailIcon className="h-3 w-3 text-text-secondary" />}
+            icon={
+              <EnvelopeIcon
+                className="h-3 w-3 text-text-secondary"
+                aria-hidden="true"
+              />
+            }
           />
         </PlaygroundPreview>
       </PlaygroundSection>
