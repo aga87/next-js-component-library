@@ -1,5 +1,5 @@
-import { Button, type SubmitButtonProps } from "../Button";
-import { Loader } from "../Loader";
+import { Button, type SubmitButtonProps } from "../actions/Button";
+import { Loader } from "../feedback/Loader";
 
 export const SubmitButton = ({
   children,
